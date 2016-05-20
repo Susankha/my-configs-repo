@@ -1,1 +1,1 @@
-# this is my-configs-repo
+# This is a sample configurations repo
