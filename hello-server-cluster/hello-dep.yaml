@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-dep
+  name: hello-dep
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-dep
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: hello-dep
+    spec:
+      containers:
+      - image: susankha/hello-server:v1
+        name: hello-server
+        imagePullPolicy: IfNotPresent
+        resources: {}
+status: {}
